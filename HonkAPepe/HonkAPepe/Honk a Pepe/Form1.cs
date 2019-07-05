@@ -33,6 +33,8 @@ namespace Honk_a_Pepe
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // play background music
+            wmp.controls.play();
             // make it full screen
             this.TopMost = true;
             this.WindowState = FormWindowState.Maximized;
@@ -42,8 +44,6 @@ namespace Honk_a_Pepe
             // initial score
             toolStripStatusLabel1.Text = "Top Score: 0\n     Misses: 0";
             toolStripStatusLabel2.Text = "HIGHSCORE: " + highscore;
-            // play background music
-            wmp.controls.play();
         }
         
         void honk()
@@ -124,13 +124,13 @@ namespace Honk_a_Pepe
                 }
             }
             // counter section
-            if (counter < 16) counter++;
+            if (counter < 17) counter++;
             if(counter == 15)
             {
                 pictureBox3.Location = new Point(1380, 0);
                 pictureBox2.Location = new Point(1460, 0);
             }
-            if(counter == 16)
+            if(counter == 17)
             {
                 pictureBox3.Location = new Point(-200, -200);
                 pictureBox2.Location = new Point(-200, -200);
